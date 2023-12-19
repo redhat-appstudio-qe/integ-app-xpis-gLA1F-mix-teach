@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-rvxg
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-lrgj-tenant/integ-app-xpis/hacbs-test-project-rvxg@sha256:276c5e55c86ba7ed39f64f9228833b64ed6e68a2ab8681c950c39ba21dad2de7
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
